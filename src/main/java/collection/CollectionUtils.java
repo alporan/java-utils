@@ -5,7 +5,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class CollectionUtil {
+public abstract class CollectionUtils {
+
+	private CollectionUtils() {
+		throw new IllegalStateException("Utility class");
+	}
 	
 	public static <T> Predicate<T> distinctByKey(Function<? super T, ?> keyExtractor) {
 		Set<Object> seen = ConcurrentHashMap.newKeySet();

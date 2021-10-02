@@ -1,7 +1,11 @@
 package math;
 
-public class MathUtil {
-	
+public abstract class MathUtils {
+
+	private MathUtils() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	/**
 	 * Returns {@code true} if {@code n} represents a prime number.
 	 */
@@ -27,6 +31,6 @@ public class MathUtil {
 	 * Returns {@code true} if {@code n} represents a power of two.
 	 */
 	public static boolean isPowerOfTwo(int n) {
-		return n > 0 & (n & (n - 1)) == 0;
+		return n > 0 && (n & (n - 1)) == 0;
 	}
 }
