@@ -1,6 +1,6 @@
 package math;
 
-public abstract class MathUtils {
+public class MathUtils {
 
 	private MathUtils() {
 		throw new IllegalStateException("Utility class");

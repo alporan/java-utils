@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Locale;
 
-public abstract class StringUtils {
+public class StringUtils {
 
 	private StringUtils() {
 		throw new IllegalStateException("Utility class");
