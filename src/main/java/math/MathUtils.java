@@ -58,4 +58,27 @@ public class MathUtils {
 				? (integers.get(listSize / 2) + integers.get(listSize / 2 - 1)) / 2.0
 				: integers.get(listSize / 2);
 	}
+
+	/**
+	 * @param value signed integer
+	 * @return median of given {@code value}
+	 */
+	public static long reverse(int value) {
+		boolean isNegative = false;
+		long result = 0;
+
+		if (value < 0) {
+			isNegative = true;
+			value *= -1;
+		}
+		while (value > 0) {
+			result = result * 10 + value % 10;
+			value = value / 10;
+		}
+
+		if (isNegative)
+			result *= -1;
+
+		return result;
+	}
 }
